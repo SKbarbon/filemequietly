@@ -32,6 +32,7 @@ git clone https://github.com/SKbarbon/filemequietly.git
 ```
 
 Then install the requirements in the requirements.txt file. Make sure to create a new virtual environment (venv) before that.
+Run `app.py`.
 
 ### Download
 
