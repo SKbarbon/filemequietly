@@ -1,6 +1,6 @@
 from ui_kit.page_theme import page_theme
 from pages.start_page import StartPage
-import flet
+import flet, os
 
 
 
@@ -75,6 +75,13 @@ class App:
         }
         self.page.client_storage.set(key="filemequietly", value=filemequietly_d)
         self.ngrok_token = token
+    
+    def forget_ngrok_access_token (self):
+        self.page.client_storage.remove("filemequietly")
+    
+
+    def close_app (self):
+        self.page.window.close()
         
 
 flet.app(target=App)

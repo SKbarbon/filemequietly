@@ -192,6 +192,12 @@ class ShareFilePage (flet.Column):
         selected_file_path = self.user_select_file()
         if selected_file_path != False:
             self.start_sharing_file(file_path=selected_file_path)
+    
+
+    def forget_token_and_close_app (self):
+        """Delete the ngrok access token from storage then close the app"""
+        self.app_class.forget_ngrok_access_token()
+        self.app_class.close_app()
 
     
     # Events
@@ -216,6 +222,14 @@ class ShareFilePage (flet.Column):
             sco.put_option(type=hp_type, default=hp_default_value)
             self.update_current_host_perm(permission_name=hp, new_permission_value=hp_default_value)
             self.right_section_column.controls.append(sco)
+        
+
+        # The clear token from storage and close app option.
+        self.right_section_column.controls.append(flet.Text("", expand=True)) # Spacer
+        self.right_section_column.controls.append(flet.TextButton(
+            content=flet.Text("Forget token and close app", color="red", weight=flet.FontWeight.W_300, size=13),
+            tooltip="Forget the stored Ngrok Access Token, then close the app so you can restart it.",
+            on_click=lambda e: self.forget_token_and_close_app()))
         
         # Ask user to select a file.
         selected_file_path = self.user_select_file()
