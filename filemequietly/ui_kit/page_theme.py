@@ -1,4 +1,4 @@
-import flet
+import flet, platform
 
 
 
@@ -9,6 +9,7 @@ def page_theme (page: flet.Page):
     page.bgcolor = "#222222"
     page.padding = 0
 
-    page.window.title_bar_hidden = True
+    if platform.system() == "Darwin":
+        page.window.title_bar_hidden = True
 
     page.window.resizable = False
