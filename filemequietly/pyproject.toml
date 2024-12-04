@@ -1,0 +1,3 @@
+[tool.flet.macos]
+entitlement."com.apple.security.network.server" = true
+entitlement."com.apple.security.network.client" = true

@@ -161,3 +161,4 @@ cython_debug/
 
 filemequietly/build/
 filemequietly/build/*
+*.DS_Store

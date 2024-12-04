@@ -36,7 +36,7 @@ Run `app.py`.
 
 ### Download
 
-Currently in progress.
+Go to the [releases](https://github.com/SKbarbon/filemequietly/releases) Page to download the latest built version of the app.
 
 ## Bruh, how the F does that work? XD
 
