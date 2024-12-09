@@ -1,4 +1,4 @@
-from utils.get_assets_path import get_assets_path
+from utils.get_assets_path import get_assets_path, get_asset_in_github_link
 import platform, os, flet
 
 
@@ -11,6 +11,8 @@ def play_alert_sound (page: flet.Page=None):
     alert_file_link = os.path.join(assets_path, "Notification Alert Sound.mp3")
     if not os.path.isfile(alert_file_link):
         print("Alert not exist")
+        alert_file_link = get_asset_in_github_link("Notification Alert Sound.mp3")
+        print(alert_file_link)
 
     
     a = flet.Audio(src=alert_file_link, autoplay=True)
