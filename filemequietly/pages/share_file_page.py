@@ -145,7 +145,7 @@ class ShareFilePage (flet.Column):
         )
         self.waiting_for_accept_place.controls.append(c)
         self.update()
-        play_alert_sound()
+        play_alert_sound(page=self.page)
 
         # Start a timeout and check if host answered, per min.
         for t in range(60):

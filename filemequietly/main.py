@@ -84,4 +84,4 @@ class App:
         self.page.window.close()
         
 
-flet.app(target=App)
+flet.app(target=App, assets_dir="assets")
