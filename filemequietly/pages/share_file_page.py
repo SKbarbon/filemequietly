@@ -145,7 +145,12 @@ class ShareFilePage (flet.Column):
         )
         self.waiting_for_accept_place.controls.append(c)
         self.update()
-        play_alert_sound(page=self.page)
+
+        if self.current_host_permissions['Play sound on new request']:
+            play_alert_sound(page=self.page)
+
+        if self.current_host_permissions['Focus window on new request']:
+            self.page.window.to_front()
 
         # Start a timeout and check if host answered, per min.
         for t in range(60):
