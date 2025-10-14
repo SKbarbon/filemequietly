@@ -21,7 +21,7 @@ class SharingRequirementsPage (flet.Container):
         ]))
         self.main_col.controls.append(flet.Row([
             flet.Container(
-            content=flet.Text("Go to ngrok dashboard", color=flet.colors.BLUE, weight=flet.FontWeight.BOLD),
+            content=flet.Text("Go to ngrok dashboard", color=flet.Colors.BLUE, weight=flet.FontWeight.BOLD),
             url="https://dashboard.ngrok.com/get-started/your-authtoken"
         )
         ]))

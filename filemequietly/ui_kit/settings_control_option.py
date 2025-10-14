@@ -16,7 +16,7 @@ class SettingsControlsOption (flet.Row):
 
         self.controls.append(
             flet.Column([
-                flet.Text(self.option_label, color=flet.colors.WHITE, weight=flet.FontWeight.W_300, size=14),
+                flet.Text(self.option_label, color=flet.Colors.WHITE, weight=flet.FontWeight.W_300, size=14),
                 flet.Text(self.explaination, color="#b6b6b6", weight=flet.FontWeight.W_300, size=11, 
                           overflow=flet.TextOverflow.CLIP, width=350)
             ], spacing=1)

@@ -1,3 +1,5 @@
-flet[all]==0.25.1
+flet
 ngrok
 flask
+flet-audio
+requests

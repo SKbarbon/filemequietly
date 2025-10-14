@@ -27,7 +27,7 @@ class ShareFilePage (flet.Column):
 
         self.main_row.controls.append(flet.Text("", expand=True)) # Spacer
 
-        self.right_section_container = flet.Container(padding=20, bgcolor=flet.colors.BLACK)
+        self.right_section_container = flet.Container(padding=20, bgcolor=flet.Colors.BLACK)
         self.right_section_column = flet.Column(scroll=flet.ScrollMode.ADAPTIVE, spacing=15)
         self.right_section_container.content = self.right_section_column
         self.main_row.controls.append(self.right_section_container)
@@ -70,7 +70,7 @@ class ShareFilePage (flet.Column):
         self.left_section_column.controls.append(self.waiting_for_accept_place)
 
         # UI - Right Section
-        self.right_section_title_label = flet.Text("Sharing &\nPermissions", color=flet.colors.WHITE,
+        self.right_section_title_label = flet.Text("Sharing &\nPermissions", color=flet.Colors.WHITE,
                                              size=29, weight=flet.FontWeight.W_900)
         self.right_section_column.controls.append(self.right_section_title_label)
         

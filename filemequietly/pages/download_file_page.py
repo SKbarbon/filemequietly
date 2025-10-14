@@ -52,7 +52,7 @@ class DownloadFilePage (flet.Container):
         self.main_col.controls.append(flet.Text("", expand=True)) # Spacer
 
         self.main_col.controls.append(flet.Row([
-            flet.TextButton(content=flet.Text("Go Back", color=flet.colors.BLUE), on_click=lambda e: self.go_back())
+            flet.TextButton(content=flet.Text("Go Back", color=flet.Colors.BLUE), on_click=lambda e: self.go_back())
         ]))
 
         self.update()
@@ -81,7 +81,7 @@ class DownloadFilePage (flet.Container):
             value=0,
             width=200,
             bgcolor=None,
-            color=flet.colors.BLUE
+            color=flet.Colors.BLUE
         )
         self.main_col.controls.append(self.download_progress_bar)
 
@@ -114,7 +114,7 @@ class DownloadFilePage (flet.Container):
 
     def update_download_progress (self, progress_num:int):
         self.download_progress_bar.value = progress_num * 0.01
-        self.download_progress_bar.bgcolor = flet.colors.BLACK54
+        self.download_progress_bar.bgcolor = flet.Colors.BLACK54
         self.status_label.value = f"Downloading.."
         self.update()
     
@@ -130,7 +130,7 @@ class DownloadFilePage (flet.Container):
         if self.host_info.post_download_message is not None:
             self.main_col.controls.append(flet.Row([flet.Text(self.host_info.post_download_message)], expand=True, alignment=flet.MainAxisAlignment.CENTER))
         self.main_col.controls.append(flet.Text("Your file is in the default Downloads folder.", weight=flet.FontWeight.W_300, 
-                                                size=13, color=flet.colors.GREY))
+                                                size=13, color=flet.Colors.GREY))
 
         self.main_col.controls.append(flet.Text("", expand=True)) # Spacer
 
